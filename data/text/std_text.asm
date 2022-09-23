@@ -50,11 +50,7 @@ PokeComNurseNiteText:
 	done
 
 NurseAskHealText:
-	text "We can heal your"
-	line "#MON to perfect"
-	cont "health."
-
-	para "Shall we heal your"
+	text "Shall we heal your"
 	line "#MON?"
 	done
 
@@ -64,10 +60,7 @@ NurseTakePokemonText:
 	done
 
 NurseReturnPokemonText:
-	text "Thank you for"
-	line "waiting."
-
-	para "Your #MON are"
+	text "Your #MON are"
 	line "fully healed."
 	done
 
