@@ -55,8 +55,8 @@ GoldenrodDeptStore4FGameboyKidText:
 	text "Some #MON"
 	line "evolve only by"
 
-	para "being traded via a"
-	line "Game Link cable."
+	para "being very close"
+	line "with its TRAINER."
 
 	para "I know of four:"
 	line "MACHOKE, KADABRA,"
