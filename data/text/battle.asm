@@ -229,9 +229,7 @@ LostAgainstText:
 BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 	text "<ENEMY>"
 	line "is about to use"
-	cont "@"
-	text_ram wEnemyMonNickname
-	text "."
+	cont "another #MON."
 
 	para "Will <PLAYER>"
 	line "change #MON?"
