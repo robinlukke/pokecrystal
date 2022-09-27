@@ -3583,7 +3583,7 @@ BattleCommand_SleepTarget:
 
 	ld a, [wAttackMissed]
 	and a
-	jp nz, PrintDidntAffect2
+	jp nz, PrintButItFailed
 
 	ld hl, DidntAffect1Text
 
@@ -5728,7 +5728,7 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit:
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
-	jp PrintDidntAffect2
+	jp PrintButItFailed
 
 BattleCommand_Paralyze:
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -5781,7 +5781,7 @@ BattleCommand_Paralyze:
 	jp StdBattleTextbox
 
 .failed
-	jp PrintDidntAffect2
+	jp PrintButItFailed
 
 .didnt_affect
 	call AnimateFailedMove
@@ -6100,12 +6100,6 @@ FailMimic:
 PrintDidntAffect:
 	ld hl, DidntAffect1Text
 	jp StdBattleTextbox
-
-PrintDidntAffect2:
-	call AnimateFailedMove
-	ld hl, DidntAffect1Text ; 'it didn't affect'
-	ld de, DidntAffect2Text ; 'it didn't affect'
-	jp FailText_CheckOpponentProtect
 
 PrintParalyze:
 ; 'paralyzed! maybe it can't attack!'

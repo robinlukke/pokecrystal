@@ -898,8 +898,7 @@ DidntAffect1Text:
 	prompt
 
 DidntAffect2Text:
-	text "It didn't affect"
-	line "<TARGET>!"
+	text "But it failed!"
 	prompt
 
 HPIsFullText:
