@@ -447,7 +447,6 @@ ConfirmContinue:
 
 Continue_CheckRTC_RestartClock:
 	call CheckRTCStatus
-	and %10000000 ; Day count exceeded 16383
 	jr z, .pass
 	farcall RestartClock
 	ld a, c
