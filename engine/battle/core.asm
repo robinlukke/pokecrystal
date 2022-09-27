@@ -7053,7 +7053,7 @@ GiveExperiencePoints:
 	call GetPartyParamLocation
 	ld a, [hl]
 	cp LUCKY_EGG
-	call z, BoostExp
+	call z, BoostExpLuckyEgg
 	ldh a, [hQuotient + 3]
 	ld [wStringBuffer2 + 1], a
 	ldh a, [hQuotient + 2]
@@ -7369,17 +7369,39 @@ push bc
 	ret
 
 BoostExp:
-; Multiply experience by 1.5x => by 2.0x
+; Multiply experience by 2:
 	push bc
 ; load experience value
 	ldh a, [hProduct + 2]
 	ld b, a
 	ldh a, [hProduct + 3]
 	ld c, a
-; halve it
-;	srl b
-;	rr c
-; add it back to the whole exp value
+; add it to the whole exp value
+	add c
+	ldh [hProduct + 3], a
+	ldh a, [hProduct + 2]
+	adc b
+	ldh [hProduct + 2], a
+	pop bc
+	ret
+
+BoostExpLuckyEgg:
+; Multiply experience by 10:
+	push bc
+; load experience value
+	ldh a, [hProduct + 2]
+	ld b, a
+	ldh a, [hProduct + 3]
+	ld c, a
+; add it to the whole exp value 9 times
+	add c
+	add c
+	add c
+	add c
+	add c
+	add c
+	add c
+	add c
 	add c
 	ldh [hProduct + 3], a
 	ldh a, [hProduct + 2]
