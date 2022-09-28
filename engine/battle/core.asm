@@ -262,6 +262,9 @@ HandleBetweenTurnEffects:
 	call HandlePerishSong
 	call CheckFaint_PlayerThenEnemy
 	ret c
+	call ResidualDamage
+	call CheckFaint_PlayerThenEnemy
+	RET C
 	jr .NoMoreFaintingConditions
 
 .CheckEnemyFirst:
@@ -911,8 +914,6 @@ Battle_EnemyFirst:
 
 .switch_item
 	call SetEnemyTurn
-	call ResidualDamage
-	jp z, HandleEnemyMonFaint
 	call RefreshBattleHuds
 	call PlayerTurn_EndOpponentProtectEndureDestinyBond
 	call CheckMobileBattleError
@@ -925,8 +926,6 @@ Battle_EnemyFirst:
 	call HasPlayerFainted
 	jp z, HandlePlayerMonFaint
 	call SetPlayerTurn
-	call ResidualDamage
-	jp z, HandlePlayerMonFaint
 	call RefreshBattleHuds
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
@@ -951,10 +950,6 @@ Battle_PlayerFirst:
 	jp z, HandlePlayerMonFaint
 	push bc
 	call SetPlayerTurn
-	call ResidualDamage
-	pop bc
-	jp z, HandlePlayerMonFaint
-	push bc
 	call RefreshBattleHuds
 	pop af
 	jr c, .switched_or_used_item
@@ -974,8 +969,6 @@ Battle_PlayerFirst:
 
 .switched_or_used_item
 	call SetEnemyTurn
-	call ResidualDamage
-	jp z, HandleEnemyMonFaint
 	call RefreshBattleHuds
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
