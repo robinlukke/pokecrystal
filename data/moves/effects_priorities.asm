@@ -1,6 +1,7 @@
 MoveEffectPriorities:
 	db EFFECT_PROTECT,      3
 	db EFFECT_ENDURE,       3
+	DB EFFECT_BIDE,			3
 	db EFFECT_PRIORITY_HIT, 2
 	db EFFECT_TELEPORT,		0
 	db EFFECT_FORCE_SWITCH, 0
