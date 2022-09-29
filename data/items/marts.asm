@@ -115,25 +115,32 @@ MartGoldenrod2F2:
 
 MartGoldenrod3F:
 	db 10 ; # items
-	db KINGS_ROCK
-	db METAL_COAT
-	db UP_GRADE
-	db DRAGON_SCALE
 	db SUN_STONE
 	db MOON_STONE
 	db LEAF_STONE
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
+	db KINGS_ROCK
+	db METAL_COAT
+	db UP_GRADE
+	db DRAGON_SCALE
 	db -1 ; end
 
 MartGoldenrod4F:
-	db 5 ; # items
+	db 12 ; # items
+	db HP_UP
 	db PROTEIN
 	db IRON
-	db CARBOS
 	db CALCIUM
-	db HP_UP
+	db CARBOS
+	db X_ATTACK
+	db X_DEFEND
+	db X_SPECIAL
+	db X_SPEED
+	db X_ACCURACY
+	db DIRE_HIT
+	db GUARD_SPEC
 	db -1 ; end
 
 MartGoldenrod5F1:
