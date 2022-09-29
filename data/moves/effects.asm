@@ -2074,3 +2074,19 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+
+Growth:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	specialattackup
+	lowersub
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
