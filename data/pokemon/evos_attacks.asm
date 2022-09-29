@@ -934,6 +934,7 @@ MachopEvosAttacks:
     db  7, KARATE_CHOP
     db  9, FORESIGHT
     db 15, SEISMIC_TOSS
+	db 25, VITAL_THROW
     db 33, SUBMISSION
     db 39, CROSS_CHOP
     db 43, SCARY_FACE
@@ -949,6 +950,7 @@ MachokeEvosAttacks:
     db  7, KARATE_CHOP
     db  9, FORESIGHT
     db 15, SEISMIC_TOSS
+	db 25, VITAL_THROW
     db 37, SUBMISSION
     db 47, CROSS_CHOP
     db 53, SCARY_FACE
@@ -964,6 +966,7 @@ MachampEvosAttacks:
     db  7, KARATE_CHOP
     db  9, FORESIGHT
     db 15, SEISMIC_TOSS
+	db 25, VITAL_THROW
     db 37, SUBMISSION
     db 47, CROSS_CHOP
     db 53, SCARY_FACE
@@ -1854,6 +1857,7 @@ PinsirEvosAttacks:
     db  4, BIND
     db  8, SEISMIC_TOSS
     db 11, HARDEN
+	db 18, VITAL_THROW
     db 33, SUBMISSION
     db 40, SWORDS_DANCE
     db 43, THRASH
