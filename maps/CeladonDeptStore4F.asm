@@ -11,7 +11,7 @@ CeladonDeptStore4F_MapScripts:
 CeladonDeptStore4FClerkScript:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_CELADON_4F
+	pokemart MARTTYPE_STANDARD, MART_MAIL
 	closetext
 	end
 

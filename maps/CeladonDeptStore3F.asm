@@ -13,7 +13,7 @@ CeladonDeptStore3F_MapScripts:
 CeladonDeptStore3FClerkScript:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_CELADON_3F
+	pokemart MARTTYPE_STANDARD, MART_CELADON_TMS
 	closetext
 	end
 
