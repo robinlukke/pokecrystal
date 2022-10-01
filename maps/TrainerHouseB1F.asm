@@ -14,8 +14,6 @@ TrainerHouseB1FNoopScene:
 TrainerHouseReceptionistScript:
 	turnobject PLAYER, UP
 	opentext
-	checkflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
-	iftrue .FoughtTooManyTimes
 	writetext TrainerHouseB1FIntroText
 	promptbutton
 	special TrainerHouse
@@ -31,7 +29,6 @@ TrainerHouseReceptionistScript:
 	writetext TrainerHouseB1FAskWantToBattleText
 	yesorno
 	iffalse .Declined
-	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
 	writetext TrainerHouseB1FGoRightInText
 	waitbutton
 	closetext
@@ -60,13 +57,6 @@ TrainerHouseReceptionistScript:
 
 .Declined:
 	writetext TrainerHouseB1FPleaseComeAgainText
-	waitbutton
-	closetext
-	applymovement PLAYER, Movement_TrainerHouseTurnBack
-	end
-
-.FoughtTooManyTimes:
-	writetext TrainerHouseB1FSecondChallengeDeniedText
 	waitbutton
 	closetext
 	applymovement PLAYER, Movement_TrainerHouseTurnBack
@@ -114,8 +104,7 @@ TrainerHouseB1FIntroText:
 	line "TRAINING HALL."
 
 	para "You may battle a"
-	line "trainer once per"
-	cont "day."
+	line "trainer."
 	done
 
 TrainerHouseB1FYourOpponentIsText:
@@ -132,9 +121,6 @@ TrainerHouseB1FAskWantToBattleText:
 TrainerHouseB1FGoRightInText:
 	text "Please go right"
 	line "through."
-
-	para "You may begin"
-	line "right away."
 	done
 
 TrainerHouseB1FPleaseComeAgainText:
@@ -145,26 +131,13 @@ TrainerHouseB1FPleaseComeAgainText:
 	line "allowed to go in."
 	done
 
-TrainerHouseB1FSecondChallengeDeniedText:
-	text "I'm sorry."
-	line "This would be your"
-
-	para "second time today."
-	line "You're permitted"
-
-	para "to enter just once"
-	line "a day."
-	done
-
 TrainerHouseB1FCalBeatenText:
 	text "I lost…"
 	line "Darn…"
 	done
 
 TrainerHouseB1FCalBeforeText:
-	text "I traveled out"
-	line "here just so I"
-	cont "could battle you."
+	text "It's MATCH!"
 	done
 
 TrainerHouseB1F_MapEvents:
@@ -180,4 +153,4 @@ TrainerHouseB1F_MapEvents:
 
 	def_object_events
 	object_event  7,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  6, 11, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  6, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
