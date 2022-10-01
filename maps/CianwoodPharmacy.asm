@@ -9,9 +9,9 @@ CianwoodPharmacy_MapScripts:
 
 CianwoodPharmacist:
 	faceplayer
-	opentext
 	checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
 	iftrue .Mart
+	opentext
 	checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
 	iffalse .Mart
 	writetext PharmacistGiveSecretpotionText
@@ -28,43 +28,7 @@ CianwoodPharmacist:
 	end
 
 .Mart:
-	scall .CheckMart
-	closetext
-	end
-
-.CheckMart
-	readvar VAR_BADGES
-	ifequal 0, .Mart0Badges
-	ifequal 2, .Mart2Badges
-	ifequal 4, .Mart4Badges
-	ifequal 6, .Mart6Badges
-	ifequal 8, .Mart8Badges
-	end
-
-.Mart0Badges
-	pokemart MARTTYPE_PHARMACY, MART_GENERAL_0_BADGES
-	closetext
-	end
-
-.Mart2Badges
-	pokemart MARTTYPE_PHARMACY, MART_GENERAL_2_BADGES
-	closetext
-	end
-
-.Mart4Badges
-	pokemart MARTTYPE_PHARMACY, MART_GENERAL_4_BADGES
-	closetext
-	end
-
-.Mart6Badges
-	pokemart MARTTYPE_PHARMACY, MART_GENERAL_6_BADGES
-	closetext
-	end
-
-.Mart8Badges
-	pokemart MARTTYPE_PHARMACY, MART_GENERAL_8_BADGES
-	closetext
-	end
+	jumpstd GeneralMartScript
 
 CianwoodPharmacyBookshelf:
 	jumpstd DifficultBookshelfScript

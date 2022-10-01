@@ -56,6 +56,7 @@ StdScripts::
 	add_stdscript PCScript
 	add_stdscript GameCornerCoinVendorScript
 	add_stdscript HappinessCheckScript
+	add_stdscript GeneralMartScript
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -1895,3 +1896,55 @@ Movement_ContestResults_WalkAfterWarp:
 	step DOWN
 	turn_head UP
 	step_end
+
+GeneralMartScript:
+	opentext
+	scall .CheckMart
+	closetext
+	end
+
+.CheckMart
+	readvar VAR_BADGES
+	ifequal 0, .Mart0Badges
+	ifequal 1, .Mart0Badges
+	ifequal 2, .Mart2Badges
+	ifequal 3, .Mart2Badges
+	ifequal 4, .Mart4Badges
+	ifequal 5, .Mart4Badges
+	ifequal 6, .Mart6Badges
+	ifequal 7, .Mart6Badges
+	ifequal 8, .Mart8Badges
+	ifequal 9, .Mart8Badges
+	ifequal 10, .Mart8Badges
+	ifequal 11, .Mart8Badges
+	ifequal 12, .Mart8Badges
+	ifequal 13, .Mart8Badges
+	ifequal 14, .Mart8Badges
+	ifequal 15, .Mart8Badges
+	ifequal 16, .Mart8Badges
+	end
+
+.Mart0Badges
+	pokemart MARTTYPE_STANDARD, MART_GENERAL_0_BADGES
+	closetext
+	end
+
+.Mart2Badges
+	pokemart MARTTYPE_STANDARD, MART_GENERAL_2_BADGES
+	closetext
+	end
+
+.Mart4Badges
+	pokemart MARTTYPE_STANDARD, MART_GENERAL_4_BADGES
+	closetext
+	end
+
+.Mart6Badges
+	pokemart MARTTYPE_STANDARD, MART_GENERAL_6_BADGES
+	closetext
+	end
+
+.Mart8Badges
+	pokemart MARTTYPE_STANDARD, MART_GENERAL_8_BADGES
+	closetext
+	end
