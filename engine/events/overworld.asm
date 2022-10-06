@@ -608,9 +608,9 @@ TrySurfOW::
 	jr c, .quit
 
 ; Step 1
-	ld de, ENGINE_FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
+	; ld de, ENGINE_FOGBADGE
+	; call CheckEngineFlag
+	; jr c, .quit
 
 ; Step 2
 	ld a, HM_SURF
@@ -825,9 +825,9 @@ Script_UsedWaterfall:
 
 TryWaterfallOW::
 ; Step 1
-	ld de, ENGINE_RISINGBADGE
-	call CheckEngineFlag
-	jr c, .failed
+	; ld de, ENGINE_RISINGBADGE
+	; call CheckEngineFlag
+	; jr c, .failed
 ; Step 2
 	ld a, HM_WATERFALL
 	ld [wCurItem], a
@@ -1192,9 +1192,9 @@ BouldersMayMoveText:
 
 TryStrengthOW:
 ; Step 1
-	ld de, ENGINE_PLAINBADGE
-	call CheckEngineFlag
-	jr c, .nope
+	; ld de, ENGINE_PLAINBADGE
+	; call CheckEngineFlag
+	; jr c, .nope
 ; Step 2
 	ld a, HM_STRENGTH
 	ld [wCurItem], a
@@ -1341,9 +1341,9 @@ DisappearWhirlpool:
 
 TryWhirlpoolOW::
 ; Step 1
-	ld de, ENGINE_GLACIERBADGE
-	call CheckEngineFlag
-	jr c, .failed
+	; ld de, ENGINE_GLACIERBADGE
+	; call CheckEngineFlag
+	; jr c, .failed
 ; Step 2
 	ld a, HM_WHIRLPOOL
 	ld [wCurItem], a
@@ -1953,9 +1953,9 @@ GotOffBikeText:
 
 TryCutOW::
  ; Step 1
-	ld de, ENGINE_HIVEBADGE
-	call CheckEngineFlag
-	jr c, .cant_cut
+	; ld de, ENGINE_HIVEBADGE
+	; call CheckEngineFlag
+	; jr c, .cant_cut
  ; end of Step 1
 
  ; Step 2
