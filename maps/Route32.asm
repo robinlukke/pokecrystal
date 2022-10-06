@@ -50,9 +50,7 @@ Route32CooltrainerMContinueScene:
 	iftrue .GotMiracleSeed
 	checkflag ENGINE_ZEPHYRBADGE
 	iffalse .DontHaveZephyrBadge
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .GiveMiracleSeed
-	writetext Route32CooltrainerMText_AideIsWaiting
 	waitbutton
 	closetext
 	end
@@ -82,22 +80,6 @@ Route32CooltrainerMContinueScene:
 	waitbutton
 .BagFull:
 	closetext
-	end
-
-Route32CooltrainerMStopsYouScene:
-	turnobject ROUTE32_COOLTRAINER_M, LEFT
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route32CooltrainerMText_WhatsTheHurry
-	waitbutton
-	closetext
-	follow PLAYER, ROUTE32_COOLTRAINER_M
-	applymovement PLAYER, Movement_Route32CooltrainerMPushesYouBackToViolet
-	stopfollow
-	turnobject PLAYER, DOWN
-	scall Route32CooltrainerMContinueScene
-	applymovement ROUTE32_COOLTRAINER_M, Movement_Route32CooltrainerMReset1
-	applymovement ROUTE32_COOLTRAINER_M, Movement_Route32CooltrainerMReset2
 	end
 
 Route32RoarTMGuyScript:
@@ -930,7 +912,6 @@ Route32_MapEvents:
 	warp_event  6, 79, UNION_CAVE_1F, 4
 
 	def_coord_events
-	coord_event 18,  8, SCENE_ROUTE32_COOLTRAINER_M_BLOCKS, Route32CooltrainerMStopsYouScene
 	coord_event  7, 71, SCENE_ROUTE32_OFFER_SLOWPOKETAIL, Route32WannaBuyASlowpokeTailScript
 
 	def_bg_events
