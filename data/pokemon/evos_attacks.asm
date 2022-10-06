@@ -455,7 +455,14 @@ NidoranMEvosAttacks:
 NidorinoEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, NIDOKING
 	db 0 ; no more evolutions
-
+	db  1, LEER
+    db  1, PECK
+    db  7, FOCUS_ENERGY
+    db  9, DOUBLE_KICK
+    db 13, POISON_STING
+    db 19, FURY_ATTACK
+    db 21, HORN_ATTACK
+    db 45, HORN_DRILL
     db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
