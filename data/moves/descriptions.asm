@@ -11,7 +11,7 @@ MoveDescriptions::
 	dw IcePunchDescription
 	dw ThunderpunchDescription
 	dw ScratchDescription
-	dw VicegripDescription
+	dw VisegripDescription
 	dw GuillotineDescription
 	dw RazorWindDescription
 	dw SwordsDanceDescription
@@ -185,7 +185,7 @@ MoveDescriptions::
 	dw ProtectDescription
 	dw MachPunchDescription
 	dw ScaryFaceDescription
-	dw FaintAttackDescription
+	dw FeintAttackDescription
 	dw SweetKissDescription
 	dw BellyDrumDescription
 	dw SludgeBombDescription
@@ -307,7 +307,7 @@ ScratchDescription:
 	db   "Scratches with"
 	next "sharp claws.@"
 
-VicegripDescription:
+VisegripDescription:
 	db   "Grips with power-"
 	next "ful pincers.@"
 
@@ -1003,7 +1003,7 @@ ScaryFaceDescription:
 	db   "Sharply reduces"
 	next "the foe's SPEED.@"
 
-FaintAttackDescription:
+FeintAttackDescription:
 	db   "An attack that"
 	next "never misses.@"
 

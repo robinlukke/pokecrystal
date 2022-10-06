@@ -16,7 +16,7 @@
 	const ICE_PUNCH    ; 08
 	const THUNDERPUNCH ; 09
 	const SCRATCH      ; 0a
-	const VICEGRIP     ; 0b
+	const VISEGRIP     ; 0b
 	const GUILLOTINE   ; 0c
 	const RAZOR_WIND   ; 0d
 	const SWORDS_DANCE ; 0e
@@ -190,7 +190,7 @@
 	const PROTECT      ; b6
 	const MACH_PUNCH   ; b7
 	const SCARY_FACE   ; b8
-	const FAINT_ATTACK ; b9
+	const FEINT_ATTACK ; b9
 	const SWEET_KISS   ; ba
 	const BELLY_DRUM   ; bb
 	const SLUDGE_BOMB  ; bc

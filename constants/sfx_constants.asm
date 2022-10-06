@@ -54,7 +54,7 @@
 	const SFX_COMET_PUNCH                 ; 33
 	const SFX_MEGA_PUNCH                  ; 34
 	const SFX_SCRATCH                     ; 35
-	const SFX_VICEGRIP                    ; 36
+	const SFX_VISEGRIP                    ; 36
 	const SFX_RAZOR_WIND                  ; 37
 	const SFX_CUT                         ; 38
 	const SFX_WING_ATTACK                 ; 39

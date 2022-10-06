@@ -12,7 +12,7 @@ BattleAnimations::
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Thunderpunch
 	dw BattleAnim_Scratch
-	dw BattleAnim_Vicegrip
+	dw BattleAnim_Visegrip
 	dw BattleAnim_Guillotine
 	dw BattleAnim_RazorWind
 	dw BattleAnim_SwordsDance
@@ -186,7 +186,7 @@ BattleAnimations::
 	dw BattleAnim_Protect
 	dw BattleAnim_MachPunch
 	dw BattleAnim_ScaryFace
-	dw BattleAnim_FaintAttack
+	dw BattleAnim_FeintAttack
 	dw BattleAnim_SweetKiss
 	dw BattleAnim_BellyDrum
 	dw BattleAnim_SludgeBomb
@@ -1501,9 +1501,9 @@ BattleAnim_AuroraBeam:
 	anim_wait 64
 	anim_ret
 
-BattleAnim_Vicegrip:
+BattleAnim_Visegrip:
 	anim_1gfx ANIM_GFX_CUT
-	anim_sound 0, 1, SFX_VICEGRIP
+	anim_sound 0, 1, SFX_VISEGRIP
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 152, 40, $0
 	anim_obj ANIM_OBJ_CUT_UP_RIGHT, 120, 72, $0
 	anim_wait 32
@@ -2007,7 +2007,7 @@ BattleAnim_AcidArmor:
 
 BattleAnim_Splash:
 	anim_1gfx ANIM_GFX_HIT
-	anim_sound 0, 0, SFX_VICEGRIP
+	anim_sound 0, 0, SFX_VISEGRIP
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, BG_EFFECT_USER, $0
 	anim_wait 96
@@ -2516,7 +2516,7 @@ BattleAnim_Guillotine:
 	anim_1gfx ANIM_GFX_CUT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
 	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $40, $2, $0
-	anim_sound 0, 1, SFX_VICEGRIP
+	anim_sound 0, 1, SFX_VISEGRIP
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 156, 44, $0
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 152, 40, $0
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 148, 36, $0
@@ -3426,7 +3426,7 @@ BattleAnim_ScaryFace:
 	anim_wait 64
 	anim_ret
 
-BattleAnim_FaintAttack:
+BattleAnim_FeintAttack:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_CURSE
 	anim_call BattleAnim_TargetObj_1Row
@@ -4359,7 +4359,7 @@ BattleAnim_CrossChop:
 	anim_wait 8
 	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $58, $2, $0
 	anim_wait 92
-	anim_sound 0, 1, SFX_VICEGRIP
+	anim_sound 0, 1, SFX_VISEGRIP
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
 	anim_wait 16
 	anim_ret

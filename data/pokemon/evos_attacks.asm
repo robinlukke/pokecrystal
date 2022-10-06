@@ -508,7 +508,7 @@ VulpixEvosAttacks:
     db 10, QUICK_ATTACK
     db 12, CONFUSE_RAY
     db 15, FIRE_SPIN
-    db 23, FAINT_ATTACK
+    db 23, FEINT_ATTACK
     db 34, SAFEGUARD
     db 36, FLAMETHROWER
     db 42, FIRE_BLAST
@@ -522,7 +522,7 @@ NinetalesEvosAttacks:
     db 10, QUICK_ATTACK
     db 12, CONFUSE_RAY
     db 15, FIRE_SPIN
-    db 23, FAINT_ATTACK
+    db 23, FEINT_ATTACK
     db 34, SAFEGUARD
     db 36, FLAMETHROWER
     db 42, FIRE_BLAST
@@ -734,7 +734,7 @@ MeowthEvosAttacks:
     db  6, BITE
     db 14, FURY_SWIPES
     db 17, SCREECH
-    db 22, FAINT_ATTACK
+    db 22, FEINT_ATTACK
     db 30, PAY_DAY
     db 33, SLASH
     db 0 ; no more level-up moves
@@ -747,7 +747,7 @@ PersianEvosAttacks:
     db  6, BITE
     db 14, FURY_SWIPES
     db 17, SCREECH
-    db 22, FAINT_ATTACK
+    db 22, FEINT_ATTACK
     db 37, SLASH
     db 0 ; no more level-up moves
 
@@ -1413,7 +1413,7 @@ KrabbyEvosAttacks:
 	db EVOLVE_LEVEL, 28, KINGLER
 	db 0 ; no more evolutions
     db  1, BUBBLE
-    db  5, VICEGRIP
+    db  5, VISEGRIP
     db  9, LEER
     db 11, HARDEN
     db 15, BUBBLEBEAM
@@ -1429,7 +1429,7 @@ KrabbyEvosAttacks:
 KinglerEvosAttacks:
 	db 0 ; no more evolutions
     db  1, BUBBLE
-    db  5, VICEGRIP
+    db  5, VISEGRIP
     db  9, LEER
     db 11, HARDEN
     db 15, BUBBLEBEAM
@@ -1842,7 +1842,7 @@ MagmarEvosAttacks:
     db  1, LEER
     db  5, EMBER
     db  8, SMOKESCREEN
-    db 12, FAINT_ATTACK
+    db 12, FEINT_ATTACK
     db 15, FIRE_SPIN
     db 26, CONFUSE_RAY
     db 29, FIRE_PUNCH
@@ -1853,7 +1853,7 @@ MagmarEvosAttacks:
 
 PinsirEvosAttacks:
 	db 0 ; no more evolutions
-    db  1, VICEGRIP
+    db  1, VISEGRIP
     db  1, FOCUS_ENERGY
     db  4, BIND
     db  8, SEISMIC_TOSS
@@ -2672,7 +2672,7 @@ SudowoodoEvosAttacks:
     db  8, LOW_KICK
     db 12, ROCK_THROW
     db 15, MIMIC
-    db 19, FAINT_ATTACK
+    db 19, FEINT_ATTACK
     db 33, ROCK_SLIDE
     db 36, COUNTER
     db 43, DOUBLE_EDGE
@@ -2850,7 +2850,7 @@ UmbreonEvosAttacks:
     db  5, SAND_ATTACK
     db 13, QUICK_ATTACK
     db 17, CONFUSE_RAY
-    db 20, FAINT_ATTACK
+    db 20, FEINT_ATTACK
     db 29, SCREECH
     db 33, MOONLIGHT
     db 37, MEAN_LOOK
@@ -2863,7 +2863,7 @@ MurkrowEvosAttacks:
     db 11, HAZE
     db 15, WING_ATTACK
     db 21, NIGHT_SHADE
-    db 35, FAINT_ATTACK
+    db 35, FEINT_ATTACK
     db 41, MEAN_LOOK
     db 0 ; no more level-up moves
 
@@ -2974,7 +2974,7 @@ GligarEvosAttacks:
     db  7, HARDEN
     db 13, QUICK_ATTACK
     db 16, FURY_CUTTER
-    db 19, FAINT_ATTACK
+    db 19, FEINT_ATTACK
     db 27, SLASH
     db 35, SCREECH
     db 50, SWORDS_DANCE
@@ -3094,7 +3094,7 @@ SneaselEvosAttacks:
     db  1, SCRATCH
     db  1, LEER
     db  8, QUICK_ATTACK
-    db 10, FAINT_ATTACK
+    db 10, FEINT_ATTACK
     db 14, ICY_WIND
     db 16, FURY_SWIPES
     db 20, AGILITY
@@ -3110,7 +3110,7 @@ TeddiursaEvosAttacks:
     db  1, SCRATCH
     db  1, LICK
     db  8, FURY_SWIPES
-    db 15, FAINT_ATTACK
+    db 15, FEINT_ATTACK
     db 22, SWEET_SCENT
     db 29, SLASH
     db 36, CHARM
@@ -3125,7 +3125,7 @@ UrsaringEvosAttacks:
     db  1, LEER
     db  1, LICK
     db  8, FURY_SWIPES
-    db 15, FAINT_ATTACK
+    db 15, FEINT_ATTACK
     db 22, SWEET_SCENT
     db 29, SLASH
     db 38, SCARY_FACE
@@ -3280,7 +3280,7 @@ HoundourEvosAttacks:
     db 13, ROAR
     db 16, BITE
     db 25, BEAT_UP
-    db 32, FAINT_ATTACK
+    db 32, FEINT_ATTACK
     db 44, FLAMETHROWER
     db 49, CRUNCH
     db 0 ; no more level-up moves
@@ -3293,7 +3293,7 @@ HoundoomEvosAttacks:
     db 13, ROAR
     db 16, BITE
     db 26, BEAT_UP
-    db 35, FAINT_ATTACK
+    db 35, FEINT_ATTACK
     db 50, FLAMETHROWER
     db 56, CRUNCH
     db 0 ; no more level-up moves
@@ -3439,7 +3439,7 @@ MagbyEvosAttacks:
     db  1, LEER
     db  5, EMBER
     db  8, SMOKESCREEN
-    db 12, FAINT_ATTACK
+    db 12, FEINT_ATTACK
     db 15, FIRE_SPIN
     db 26, CONFUSE_RAY
     db 29, FIRE_PUNCH

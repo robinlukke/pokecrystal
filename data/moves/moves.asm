@@ -24,7 +24,7 @@ Moves:
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,           PHYSICAL, 100, 15,  30
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,      PHYSICAL, 100, 15,  30
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,        PHYSICAL, 100, 35,   0
-	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,        PHYSICAL, 100, 30,   0
+	move VISEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,        PHYSICAL, 100, 30,   0
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        PHYSICAL,  30,  5,   0
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, FLYING,        SPECIAL,  100, 10,   0
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,        STATUS,   100, 20,   0
@@ -198,7 +198,7 @@ Moves:
 	move PROTECT,      EFFECT_PROTECT,             0, NORMAL,        STATUS,   100, 10,   0
 	move MACH_PUNCH,   EFFECT_PRIORITY_HIT,       40, FIGHTING,      PHYSICAL, 100, 30,   0
 	move SCARY_FACE,   EFFECT_SPEED_DOWN_2,        0, NORMAL,        STATUS,   100, 10,   0
-	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         75, DARK,          PHYSICAL, 100, 20,   0
+	move FEINT_ATTACK, EFFECT_ALWAYS_HIT,         75, DARK,          PHYSICAL, 100, 20,   0
 	move SWEET_KISS,   EFFECT_CONFUSE,             0, FAIRY,         STATUS,   100, 10,   0
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,        STATUS,   100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,        SPECIAL,  100, 10,  30
