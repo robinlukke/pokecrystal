@@ -11,9 +11,9 @@ CianwoodPharmacist:
 	faceplayer
 	checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
 	iftrue .Mart
-	opentext
 	checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
 	iffalse .Mart
+	opentext
 	writetext PharmacistGiveSecretpotionText
 	promptbutton
 	giveitem SECRETPOTION
