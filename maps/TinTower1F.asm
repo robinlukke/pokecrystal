@@ -133,7 +133,7 @@ TinTower1FSuicuneBattleScript:
 	reloadmapafterbattle
 	pause 20
 	turnobject PLAYER, DOWN
-	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	playmusic MUSIC_MYSTERY_MAN_ENCOUNTER
 	playsound SFX_ENTER_DOOR
 	moveobject TINTOWER1F_EUSINE, 10, 15
 	appear TINTOWER1F_EUSINE

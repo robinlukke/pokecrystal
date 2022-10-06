@@ -53,7 +53,7 @@ CianwoodCitySuicuneAndEusine:
 	checkevent EVENT_FOUGHT_EUSINE
 	iftrue .Done
 	setevent EVENT_FOUGHT_EUSINE
-	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	playmusic MUSIC_MYSTERY_MAN_ENCOUNTER
 	appear CIANWOODCITY_EUSINE
 	applymovement CIANWOODCITY_EUSINE, CianwoodCityEusineApproachMovement
 	opentext
@@ -62,11 +62,11 @@ CianwoodCitySuicuneAndEusine:
 	closetext
 	winlosstext EusineBeatenText, 0
 	setlasttalked CIANWOODCITY_EUSINE
-	loadtrainer MYSTICALMAN, EUSINE
+	loadtrainer MYSTERY_MAN, EUSINE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	playmusic MUSIC_MYSTERY_MAN_ENCOUNTER
 	opentext
 	writetext EusineAfterText
 	waitbutton

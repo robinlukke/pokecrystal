@@ -284,7 +284,7 @@ DebugColorMain:
 	ld a, NUM_POKEMON ; CELEBI
 	ret
 .trainer
-	ld a, NUM_TRAINER_CLASSES ; MYSTICALMAN
+	ld a, NUM_TRAINER_CLASSES ; MYSTERY_MAN
 	ret
 
 .Jumptable:

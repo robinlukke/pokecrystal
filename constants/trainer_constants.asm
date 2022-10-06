@@ -700,7 +700,7 @@ DEF KRIS EQU __trainer_class__
 	const GRUNTF_4
 	const GRUNTF_5
 
-	trainerclass MYSTICALMAN ; 43
+	trainerclass MYSTERY_MAN ; 43
 	const EUSINE
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

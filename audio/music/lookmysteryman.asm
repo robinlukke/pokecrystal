@@ -1,11 +1,11 @@
-Music_LookMysticalMan:
+Music_LookMysteryMan:
 	channel_count 4
-	channel 1, Music_LookMysticalMan_Ch1
-	channel 2, Music_LookMysticalMan_Ch2
-	channel 3, Music_LookMysticalMan_Ch3
-	channel 4, Music_LookMysticalMan_Ch4
+	channel 1, Music_LookMysteryMan_Ch1
+	channel 2, Music_LookMysteryMan_Ch2
+	channel 3, Music_LookMysteryMan_Ch3
+	channel 4, Music_LookMysteryMan_Ch4
 
-Music_LookMysticalMan_Ch1:
+Music_LookMysteryMan_Ch1:
 	tempo 136
 	volume 7, 7
 	vibrato 10, 3, 4
@@ -192,7 +192,7 @@ Music_LookMysticalMan_Ch1:
 	note A_, 6
 	sound_ret
 
-Music_LookMysticalMan_Ch2:
+Music_LookMysteryMan_Ch2:
 	duty_cycle 3
 	vibrato 10, 3, 4
 	note_type 12, 11, 3
@@ -358,7 +358,7 @@ Music_LookMysticalMan_Ch2:
 	volume_envelope 11, 8
 	sound_ret
 
-Music_LookMysticalMan_Ch3:
+Music_LookMysteryMan_Ch3:
 	note_type 6, 1, 6
 	rest 16
 .mainloop:
@@ -533,7 +533,7 @@ Music_LookMysticalMan_Ch3:
 	note A#, 4
 	sound_loop 0, .mainloop
 
-Music_LookMysticalMan_Ch4:
+Music_LookMysteryMan_Ch4:
 	toggle_noise 3
 	drum_speed 12
 	drum_note 4, 2

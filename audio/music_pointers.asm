@@ -101,7 +101,7 @@ Music:
 	dba Music_MobileAdapterMenu
 	dba Music_MobileAdapter
 	dba Music_BuenasPassword
-	dba Music_LookMysticalMan
+	dba Music_LookMysteryMan
 	dba Music_CrystalOpening
 	dba Music_BattleTowerTheme
 	dba Music_SuicuneBattle
