@@ -47,19 +47,19 @@ CheckEngineFlag:
 	xor a
 	ret
 
-CheckBadge:
-; Check engine flag a (ENGINE_ZEPHYRBADGE thru ENGINE_EARTHBADGE)
-; Display "Badge required" text and return carry if the badge is not owned
-	call CheckEngineFlag
-	ret nc
-	ld hl, .BadgeRequiredText
-	call MenuTextboxBackup ; push text to queue
-	scf
-	ret
+; CheckBadge:
+; ; Check engine flag a (ENGINE_ZEPHYRBADGE thru ENGINE_EARTHBADGE)
+; ; Display "Badge required" text and return carry if the badge is not owned
+	; call CheckEngineFlag
+	; ret nc
+	; ld hl, .BadgeRequiredText
+	; call MenuTextboxBackup ; push text to queue
+	; scf
+	; ret
 
-.BadgeRequiredText:
-	text_far _BadgeRequiredText
-	text_end
+; .BadgeRequiredText:
+	; text_far _BadgeRequiredText
+	; text_end
 
 CheckPartyMove:
 ; Check if a monster in your party has move d.
@@ -149,7 +149,7 @@ CheckPartyCanLearnMove:
 
 .yes
 	ld a, e
-; which mon can learn the move
+	; which mon can learn the move
 	ld [wCurPartyMon], a
 	xor a
 	ret
@@ -238,17 +238,17 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_HIVEBADGE
-	call CheckBadge
-	jr c, .nohivebadge
+	; ld de, ENGINE_HIVEBADGE
+	; call CheckBadge
+	; jr c, .nohivebadge
 	call CheckMapForSomethingToCut
 	jr c, .nothingtocut
 	ld a, $1
 	ret
 
-.nohivebadge
-	ld a, $80
-	ret
+; .nohivebadge
+	; ld a, $80
+	; ret
 
 .nothingtocut
 	ld a, $2
@@ -275,23 +275,23 @@ CutNothingText:
 	text_end
 
 CheckMapForSomethingToCut:
-; Does the collision data of the facing tile permit cutting?
+	; Does the collision data of the facing tile permit cutting?
 	call GetFacingTileCoord
 	ld c, a
 	push de
 	farcall CheckCutCollision
 	pop de
 	jr nc, .fail
-; Get the location of the current block in wOverworldMapBlocks.
+	; Get the location of the current block in wOverworldMapBlocks.
 	call GetBlockLocation
 	ld c, [hl]
-; See if that block contains something that can be cut.
+	; See if that block contains something that can be cut.
 	push hl
 	ld hl, CutTreeBlockPointers
 	call CheckOverworldTileArrays
 	pop hl
 	jr nc, .fail
-; Save the Cut field move data
+	; Save the Cut field move data
 	ld a, l
 	ld [wCutWhirlpoolOverworldBlockAddr], a
 	ld a, h
@@ -342,32 +342,32 @@ CutDownTreeOrGrass:
 	ret
 
 CheckOverworldTileArrays:
-; Input: c contains the tile you're facing
-; Output: Replacement tile in b and effect on wild encounters in c, plus carry set.
-;         Carry is not set if the facing tile cannot be replaced, or if the tileset
-;         does not contain a tile you can replace.
+	; Input: c contains the tile you're facing
+	; Output: Replacement tile in b and effect on wild encounters in c, plus carry set.
+	;         Carry is not set if the facing tile cannot be replaced, or if the tileset
+	;         does not contain a tile you can replace.
 
-; Dictionary lookup for pointer to tile replacement table
+	; Dictionary lookup for pointer to tile replacement table
 	push bc
 	ld a, [wMapTileset]
 	ld de, 3
 	call IsInArray
 	pop bc
 	jr nc, .nope
-; Load the pointer
+	; Load the pointer
 	inc hl
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-; Look up the tile you're facing
+	; Look up the tile you're facing
 	ld de, 3
 	ld a, c
 	call IsInArray
 	jr nc, .nope
-; Load the replacement to b
+	; Load the replacement to b
 	inc hl
 	ld b, [hl]
-; Load the animation type parameter to c
+	; Load the animation type parameter to c
 	inc hl
 	ld c, [hl]
 	scf
@@ -386,9 +386,9 @@ FlashFunction:
 	ret
 
 .CheckUseFlash:
-	ld de, ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .nozephyrbadge
+	; ld de, ENGINE_ZEPHYRBADGE
+	; farcall CheckBadge
+	; jr c, .nozephyrbadge
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -406,9 +406,9 @@ FlashFunction:
 	ld a, $80
 	ret
 
-.nozephyrbadge
-	ld a, $80
-	ret
+; .nozephyrbadge
+	; ld a, $80
+	; ret
 
 UseFlash:
 	ld hl, Script_UseFlash
@@ -452,9 +452,9 @@ SurfFunction:
 	dw .AlreadySurfing
 
 .TrySurf:
-	ld de, ENGINE_FOGBADGE
-	call CheckBadge
-	jr c, .nofogbadge
+	; ld de, ENGINE_FOGBADGE
+	; call CheckBadge
+	; jr c, .nofogbadge
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .cannotsurf
@@ -473,9 +473,9 @@ SurfFunction:
 	jr c, .cannotsurf
 	ld a, $1
 	ret
-.nofogbadge
-	ld a, $80
-	ret
+; .nofogbadge
+	; ld a, $80
+	; ret
 .alreadyfail
 	ld a, $3
 	ret
@@ -608,9 +608,9 @@ TrySurfOW::
 	jr c, .quit
 
 ; Step 1
-	ld de, ENGINE_FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
+	; ld de, ENGINE_FOGBADGE
+	; call CheckEngineFlag
+	; jr c, .quit
 
 ; Step 2
 	ld a, HM_SURF
@@ -678,9 +678,9 @@ FlyFunction:
 	dw .FailFly
 
 .TryFly:
-	ld de, ENGINE_STORMBADGE
-	call CheckBadge
-	jr c, .nostormbadge
+	; ld de, ENGINE_STORMBADGE
+	; call CheckBadge
+	; jr c, .nostormbadge
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr z, .outdoors
@@ -703,9 +703,9 @@ FlyFunction:
 	ld a, $1
 	ret
 
-.nostormbadge
-	ld a, $82
-	ret
+; .nostormbadge
+	; ld a, $82
+	; ret
 
 .indoors
 	ld a, $2
@@ -757,10 +757,10 @@ WaterfallFunction:
 	ret
 
 .TryWaterfall:
-	ld de, ENGINE_RISINGBADGE
-	farcall CheckBadge
-	ld a, $80
-	ret c
+	; ld de, ENGINE_RISINGBADGE
+	; farcall CheckBadge
+	; ld a, $80
+	; ret c
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld hl, Script_WaterfallFromMenu
@@ -825,9 +825,9 @@ Script_UsedWaterfall:
 
 TryWaterfallOW::
 ; Step 1
-	ld de, ENGINE_RISINGBADGE
-	call CheckEngineFlag
-	jr c, .failed
+	; ld de, ENGINE_RISINGBADGE
+	; call CheckEngineFlag
+	; jr c, .failed
 ; Step 2
 	ld a, HM_WATERFALL
 	ld [wCurItem], a
@@ -1098,9 +1098,9 @@ StrengthFunction:
 	ret
 
 .TryStrength:
-	ld de, ENGINE_PLAINBADGE
-	call CheckBadge
-	jr c, .Failed
+	; ld de, ENGINE_PLAINBADGE
+	; call CheckBadge
+	; jr c, .Failed
 	jr .UseStrength
 
 .AlreadyUsingStrength: ; unreferenced
@@ -1192,9 +1192,9 @@ BouldersMayMoveText:
 
 TryStrengthOW:
 ; Step 1
-	ld de, ENGINE_PLAINBADGE
-	call CheckEngineFlag
-	jr c, .nope
+	; ld de, ENGINE_PLAINBADGE
+	; call CheckEngineFlag
+	; jr c, .nope
 ; Step 2
 	ld a, HM_STRENGTH
 	ld [wCurItem], a
@@ -1249,9 +1249,9 @@ WhirlpoolFunction:
 	dw .FailWhirlpool
 
 .TryWhirlpool:
-	ld de, ENGINE_GLACIERBADGE
-	call CheckBadge
-	jr c, .noglacierbadge
+	; ld de, ENGINE_GLACIERBADGE
+	; call CheckBadge
+	; jr c, .noglacierbadge
 	call TryWhirlpoolMenu
 	jr c, .failed
 	ld a, $1
@@ -1261,9 +1261,9 @@ WhirlpoolFunction:
 	ld a, $2
 	ret
 
-.noglacierbadge
-	ld a, $80
-	ret
+; .noglacierbadge
+	; ld a, $80
+	; ret
 
 .DoWhirlpool:
 	ld hl, Script_WhirlpoolFromMenu
@@ -1341,9 +1341,9 @@ DisappearWhirlpool:
 
 TryWhirlpoolOW::
 ; Step 1
-	ld de, ENGINE_GLACIERBADGE
-	call CheckEngineFlag
-	jr c, .failed
+	; ld de, ENGINE_GLACIERBADGE
+	; call CheckEngineFlag
+	; jr c, .failed
 ; Step 2
 	ld a, HM_WHIRLPOOL
 	ld [wCurItem], a
@@ -1953,9 +1953,9 @@ GotOffBikeText:
 
 TryCutOW::
  ; Step 1
-	ld de, ENGINE_HIVEBADGE
-	call CheckEngineFlag
-	jr c, .cant_cut
+	; ld de, ENGINE_HIVEBADGE
+	; call CheckEngineFlag
+	; jr c, .cant_cut
  ; end of Step 1
 
  ; Step 2
