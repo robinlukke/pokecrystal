@@ -168,138 +168,11 @@ TrainerSchoolboyAlan1:
 	trainer SCHOOLBOY, ALAN1, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlan1SeenText, SchoolboyAlan1BeatenText, 0, .Script
 
 .Script:
-	loadvar VAR_CALLERID, PHONE_SCHOOLBOY_ALAN
 	endifjustbattled
 	opentext
-	checkflag ENGINE_ALAN_READY_FOR_REMATCH
-	iftrue .ChooseRematch
-	checkflag ENGINE_ALAN_HAS_FIRE_STONE
-	iftrue .GiveFireStone
-	checkcellnum PHONE_SCHOOLBOY_ALAN
-	iftrue .NumberAccepted
-	checkevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgainForPhoneNumber
 	writetext SchoolboyAlanBooksText
-	promptbutton
-	setevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	sjump .ContinueAskForPhoneNumber
-
-.AskAgainForPhoneNumber:
-	scall .AskNumber2
-.ContinueAskForPhoneNumber:
-	askforphonenumber PHONE_SCHOOLBOY_ALAN
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, SCHOOLBOY, ALAN1
-	scall .RegisteredNumber
-	sjump .NumberAccepted
-
-.ChooseRematch:
-	scall .Rematch
-	winlosstext SchoolboyAlan1BeatenText, 0
-	readmem wAlanFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkflag ENGINE_FLYPOINT_BLACKTHORN
-	iftrue .LoadFight2
-.Fight1:
-	checkflag ENGINE_FLYPOINT_OLIVINE
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer SCHOOLBOY, ALAN1
-	startbattle
-	reloadmapafterbattle
-	loadmem wAlanFightCount, 1
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight1:
-	loadtrainer SCHOOLBOY, ALAN2
-	startbattle
-	reloadmapafterbattle
-	loadmem wAlanFightCount, 2
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight2:
-	loadtrainer SCHOOLBOY, ALAN3
-	startbattle
-	reloadmapafterbattle
-	loadmem wAlanFightCount, 3
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight3:
-	loadtrainer SCHOOLBOY, ALAN4
-	startbattle
-	reloadmapafterbattle
-	loadmem wAlanFightCount, 4
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.LoadFight4:
-	loadtrainer SCHOOLBOY, ALAN5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ALAN_READY_FOR_REMATCH
-	end
-
-.GiveFireStone:
-	scall .Gift
-	verbosegiveitem FIRE_STONE
-	iffalse .BagFull
-	clearflag ENGINE_ALAN_HAS_FIRE_STONE
-	setevent EVENT_ALAN_GAVE_FIRE_STONE
-	sjump .NumberAccepted
-
-.BagFull:
-	sjump .PackFull
-
-.AskNumber1:
-	jumpstd AskNumber1MScript
-	end
-
-.AskNumber2:
-	jumpstd AskNumber2MScript
-	end
-
-.RegisteredNumber:
-	jumpstd RegisteredNumberMScript
-	end
-
-.NumberAccepted:
-	jumpstd NumberAcceptedMScript
-	end
-
-.NumberDeclined:
-	jumpstd NumberDeclinedMScript
-	end
-
-.PhoneFull:
-	jumpstd PhoneFullMScript
-	end
-
-.Rematch:
-	jumpstd RematchMScript
-	end
-
-.Gift:
-	jumpstd GiftMScript
-	end
-
-.PackFull:
-	jumpstd PackFullMScript
+	waitbutton
+	closetext
 	end
 
 TrainerPsychicMark:
@@ -679,7 +552,7 @@ Route36_MapEvents:
 	def_object_events
 	object_event 20, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicMark, -1
 	object_event 31, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSchoolboyAlan1, -1
-	object_event 35,  9, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_SUDOWOODO, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SudowoodoScript, EVENT_ROUTE_36_SUDOWOODO
+	object_event 31,  7, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_SUDOWOODO, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SudowoodoScript, EVENT_ROUTE_36_SUDOWOODO
 	object_event 51,  8, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36LassScript, -1
 	object_event 44,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36RockSmashGuyScript, -1
 	object_event 21,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36FruitTree, -1

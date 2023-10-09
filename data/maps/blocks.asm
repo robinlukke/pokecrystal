@@ -53,7 +53,6 @@ PewterPokecenter2FBeta_Blocks:
 FuchsiaPokecenter2FBeta_Blocks:
 LavenderPokecenter2FBeta_Blocks:
 CeladonPokecenter2FBeta_Blocks:
-ViridianPokecenter2FBeta_Blocks:
 SaffronPokecenter2FBeta_Blocks:
 	INCBIN "maps/Pokecenter2F.blk"
 
@@ -949,3 +948,12 @@ BattleTowerOutside_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+	
+ViridianForest_Blocks:
+	INCBIN "maps/ViridianForest.blk"
+
+ViridianForestGateNorth_Blocks:
+	INCBIN "maps/ViridianForestGateNorth.blk"
+
+ViridianForestGateSouth_Blocks:
+	INCBIN "maps/ViridianForestGateSouth.blk"

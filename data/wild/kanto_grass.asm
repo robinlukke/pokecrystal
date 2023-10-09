@@ -841,5 +841,33 @@ KantoGrassWildMons:
 	db 42, GOLBAT
 	db 42, GOLBAT
 	end_grass_wildmons
+	
+	def_grass_wildmons VIRIDIAN_FOREST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, CATERPIE
+	db 3, CATERPIE
+	db 3, WEEDLE
+	db 3, WEEDLE
+	db 7, METAPOD
+	db 7, KAKUNA
+	db 4, PIKACHU
+	; day
+	db 3, CATERPIE
+	db 3, CATERPIE
+	db 3, WEEDLE
+	db 3, WEEDLE
+	db 7, METAPOD
+	db 7, KAKUNA
+	db 4, PIKACHU
+	; nite
+	db 3, CATERPIE
+	db 3, CATERPIE
+	db 3, WEEDLE
+	db 3, WEEDLE
+	db 7, METAPOD
+	db 7, KAKUNA
+	db 4, PIKACHU
+	end_grass_wildmons
 
 	db -1 ; end

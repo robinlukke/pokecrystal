@@ -149,7 +149,7 @@ CheckPartyCanLearnMove:
 
 .yes
 	ld a, e
-	; which mon can learn the move
+; which mon can learn the move
 	ld [wCurPartyMon], a
 	xor a
 	ret
@@ -275,23 +275,23 @@ CutNothingText:
 	text_end
 
 CheckMapForSomethingToCut:
-	; Does the collision data of the facing tile permit cutting?
+; Does the collision data of the facing tile permit cutting?
 	call GetFacingTileCoord
 	ld c, a
 	push de
 	farcall CheckCutCollision
 	pop de
 	jr nc, .fail
-	; Get the location of the current block in wOverworldMapBlocks.
+; Get the location of the current block in wOverworldMapBlocks.
 	call GetBlockLocation
 	ld c, [hl]
-	; See if that block contains something that can be cut.
+; See if that block contains something that can be cut.
 	push hl
 	ld hl, CutTreeBlockPointers
 	call CheckOverworldTileArrays
 	pop hl
 	jr nc, .fail
-	; Save the Cut field move data
+; Save the Cut field move data
 	ld a, l
 	ld [wCutWhirlpoolOverworldBlockAddr], a
 	ld a, h
@@ -342,32 +342,32 @@ CutDownTreeOrGrass:
 	ret
 
 CheckOverworldTileArrays:
-	; Input: c contains the tile you're facing
-	; Output: Replacement tile in b and effect on wild encounters in c, plus carry set.
-	;         Carry is not set if the facing tile cannot be replaced, or if the tileset
-	;         does not contain a tile you can replace.
+; Input: c contains the tile you're facing
+; Output: Replacement tile in b and effect on wild encounters in c, plus carry set.
+;         Carry is not set if the facing tile cannot be replaced, or if the tileset
+;         does not contain a tile you can replace.
 
-	; Dictionary lookup for pointer to tile replacement table
+; Dictionary lookup for pointer to tile replacement table
 	push bc
 	ld a, [wMapTileset]
 	ld de, 3
 	call IsInArray
 	pop bc
 	jr nc, .nope
-	; Load the pointer
+; Load the pointer
 	inc hl
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	; Look up the tile you're facing
+; Look up the tile you're facing
 	ld de, 3
 	ld a, c
 	call IsInArray
 	jr nc, .nope
-	; Load the replacement to b
+; Load the replacement to b
 	inc hl
 	ld b, [hl]
-	; Load the animation type parameter to c
+; Load the animation type parameter to c
 	inc hl
 	ld c, [hl]
 	scf
@@ -608,9 +608,9 @@ TrySurfOW::
 	jr c, .quit
 
 ; Step 1
-	; ld de, ENGINE_FOGBADGE
-	; call CheckEngineFlag
-	; jr c, .quit
+	ld de, ENGINE_FOGBADGE
+	call CheckEngineFlag
+	jr c, .quit
 
 ; Step 2
 	ld a, HM_SURF
@@ -825,9 +825,9 @@ Script_UsedWaterfall:
 
 TryWaterfallOW::
 ; Step 1
-	; ld de, ENGINE_RISINGBADGE
-	; call CheckEngineFlag
-	; jr c, .failed
+	ld de, ENGINE_RISINGBADGE
+	call CheckEngineFlag
+	jr c, .failed
 ; Step 2
 	ld a, HM_WATERFALL
 	ld [wCurItem], a
@@ -1192,9 +1192,9 @@ BouldersMayMoveText:
 
 TryStrengthOW:
 ; Step 1
-	; ld de, ENGINE_PLAINBADGE
-	; call CheckEngineFlag
-	; jr c, .nope
+	ld de, ENGINE_PLAINBADGE
+	call CheckEngineFlag
+	jr c, .nope
 ; Step 2
 	ld a, HM_STRENGTH
 	ld [wCurItem], a
@@ -1341,9 +1341,9 @@ DisappearWhirlpool:
 
 TryWhirlpoolOW::
 ; Step 1
-	; ld de, ENGINE_GLACIERBADGE
-	; call CheckEngineFlag
-	; jr c, .failed
+	ld de, ENGINE_GLACIERBADGE
+	call CheckEngineFlag
+	jr c, .failed
 ; Step 2
 	ld a, HM_WHIRLPOOL
 	ld [wCurItem], a
@@ -1953,9 +1953,9 @@ GotOffBikeText:
 
 TryCutOW::
  ; Step 1
-	; ld de, ENGINE_HIVEBADGE
-	; call CheckEngineFlag
-	; jr c, .cant_cut
+	ld de, ENGINE_HIVEBADGE
+	call CheckEngineFlag
+	jr c, .cant_cut
  ; end of Step 1
 
  ; Step 2

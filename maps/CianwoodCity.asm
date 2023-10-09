@@ -87,25 +87,18 @@ CianwoodCityChucksWife:
 	iftrue .GotFly
 	writetext ChucksWifeEasierToFlyText
 	promptbutton
-	checkevent EVENT_BEAT_CHUCK
-	iftrue .BeatChuck
-	writetext ChucksWifeBeatChuckText
-	waitbutton
-	closetext
-	end
-
-.BeatChuck:
 	writetext ChucksWifeGiveHMText
 	promptbutton
 	verbosegiveitem HM_FLY
-	iffalse .Done
 	setevent EVENT_GOT_HM02_FLY
 	writetext ChucksWifeFlySpeechText
-	promptbutton
+	waitbutton
+	closetext
+	end
+	
 .GotFly:
 	writetext ChucksWifeChubbyText
 	waitbutton
-.Done:
 	closetext
 	end
 
@@ -193,32 +186,13 @@ ChucksWifeEasierToFlyText:
 	line "to FLY…"
 	done
 
-ChucksWifeBeatChuckText:
-	text "But you can't use"
-	line "FLY without this"
-	cont "city's GYM BADGE."
-
-	para "If you beat the"
-	line "GYM LEADER here,"
-	cont "come see me."
-
-	para "I'll have a nice"
-	line "gift for you."
-	done
-
 ChucksWifeGiveHMText:
-	text "That's CIANWOOD's"
-	line "GYM BADGE!"
-
-	para "Then you should"
+	text "You should"
 	line "take this HM."
 	done
 
 ChucksWifeFlySpeechText:
-	text "Teach FLY to your"
-	line "#MON."
-
-	para "You will be able"
+	text "You will be able"
 	line "to FLY instantly"
 
 	para "to anywhere you "
@@ -226,9 +200,8 @@ ChucksWifeFlySpeechText:
 	done
 
 ChucksWifeChubbyText:
-	text "My husband lost to"
-	line "you, so he needs"
-	cont "to train harder."
+	text "My husband needs"
+	line "to train harder."
 
 	para "That's good, since"
 	line "he was getting a"
@@ -239,8 +212,8 @@ CianwoodCityYoungsterText:
 	text "If you use FLY,"
 	line "you can get back"
 
-	para "to OLIVINE in-"
-	line "stantly."
+	para "to OLIVINE"
+	line "instantly."
 	done
 
 CianwoodCityPokefanMText:
