@@ -1761,6 +1761,8 @@ RapidSpin:
 	clearhazards
 	checkfaint
 	buildopponentrage
+	speedup
+	statupmessage
 	kingsrock
 	endmove
 
