@@ -85,7 +85,7 @@ FuchsiaCitySignText:
 
 FuchsiaGymSignText:
 	text "FUCHSIA CITY"
-	line "#MON GYM"
+	line "#mon GYM"
 	cont "LEADER: JANINE"
 
 	para "The Poisonous"
@@ -103,7 +103,7 @@ SafariZoneOfficeSignText:
 
 WardensHomeSignText:
 	text "SAFARI ZONE"
-	line "WARDEN'S HOME"
+	line "WARDEN's HOME"
 	done
 
 SafariZoneClosedSignText:

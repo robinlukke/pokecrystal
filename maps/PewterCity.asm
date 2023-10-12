@@ -25,7 +25,7 @@ PewterCityGrampsScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_SILVER_WING
-	iftrue .GotSilverWing
+	iftrue .GotSilverFeather
 	writetext PewterCityGrampsText
 	promptbutton
 	verbosegiveitem SILVER_WING
@@ -33,8 +33,8 @@ PewterCityGrampsScript:
 	closetext
 	end
 
-.GotSilverWing:
-	writetext PewterCityGrampsText_GotSilverWing
+.GotSilverFeather:
+	writetext PewterCityGrampsText_GotSilverFeather
 	waitbutton
 	closetext
 	end
@@ -71,7 +71,7 @@ PewterCityCooltrainerFText:
 	line "PEWTER GYM?"
 
 	para "The LEADER uses"
-	line "rock-type #MON."
+	line "rock-type #mon."
 	done
 
 PewterCityBugCatcherText:
@@ -105,7 +105,7 @@ PewterCityGrampsText:
 	cont "I found in JOHTO."
 	done
 
-PewterCityGrampsText_GotSilverWing:
+PewterCityGrampsText_GotSilverFeather:
 	text "Going to new, un-"
 	line "known places and"
 	cont "seeing new people…"
@@ -121,11 +121,11 @@ PewterCitySignText:
 
 PewterGymSignText:
 	text "PEWTER CITY"
-	line "#MON GYM"
+	line "#mon GYM"
 	cont "LEADER: BROCK"
 
 	para "The Rock Solid"
-	line "#MON Trainer"
+	line "#mon Trainer"
 	done
 
 PewterMuseumSignText:

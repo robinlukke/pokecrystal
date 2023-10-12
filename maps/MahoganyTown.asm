@@ -225,7 +225,7 @@ MahoganyTownRagecandybarSignText:
 
 MahoganyGymSignText:
 	text "MAHOGANY TOWN"
-	line "#MON GYM"
+	line "#mon GYM"
 	cont "LEADER: PRYCE"
 
 	para "The Teacher of"

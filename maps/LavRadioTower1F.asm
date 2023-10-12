@@ -161,7 +161,7 @@ LavRadioTower1FSuperNerd2Text:
 	para "I am the super"
 	line "MUSIC DIRECTOR!"
 
-	para "Huh? Your #GEAR"
+	para "Huh? Your #Gear"
 	line "can't tune into my"
 
 	para "music programs."
@@ -198,12 +198,12 @@ LavRadioTower1FDirectoryText:
 	para "3F PERSONNEL"
 	line "4F PRODUCTION"
 
-	para "5F DIRECTOR'S"
+	para "5F DIRECTOR's"
 	line "   OFFICE"
 	done
 
 LavRadioTower1FPokeFluteSignText:
-	text "Perk Up #MON"
+	text "Perk Up #mon"
 	line "with Mellow Sounds"
 
 	para "of the # FLUTE"
@@ -212,7 +212,7 @@ LavRadioTower1FPokeFluteSignText:
 
 LavRadioTower1FReferenceLibraryText:
 	text "Wow! A full rack"
-	line "of #MON CDs and"
+	line "of #mon CDs and"
 	cont "videos."
 
 	para "This must be the"

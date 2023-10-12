@@ -148,7 +148,7 @@ MahoganyGymStatue:
 	jumpstd GymStatue2Script
 
 PryceText_Intro:
-	text "#MON have many"
+	text "#mon have many"
 	line "experiences in"
 
 	para "their lives, just "
@@ -163,7 +163,7 @@ PryceText_Intro:
 	cont "you what I mean."
 
 	para "I have been with"
-	line "#MON since"
+	line "#mon since"
 
 	para "before you were"
 	line "born."
@@ -199,7 +199,7 @@ Text_ReceivedGlacierBadge:
 
 PryceText_GlacierBadgeSpeech:
 	text "That BADGE will"
-	line "lets your #MON"
+	line "lets your #mon"
 	
 	para "use WHIRLPOOL"
 	line "to get across"
@@ -238,7 +238,7 @@ PryceText_CherishYourPokemon:
 
 BoarderRonaldSeenText:
 	text "I'll frostbite"
-	line "your #MON, so you"
+	line "your #mon, so you"
 	cont "can't do a thing!"
 	done
 
@@ -251,7 +251,7 @@ BoarderRonaldAfterBattleText:
 	text "I think there's a"
 	line "move a frostbitten"
 
-	para "#MON can use to"
+	para "#mon can use to"
 	line "cure itself."
 	done
 
@@ -275,7 +275,7 @@ BoarderBradBeatenText:
 BoarderBradAfterBattleText:
 	text "This GYM is great."
 	line "I love boarding"
-	cont "with my #MON!"
+	cont "with my #mon!"
 	done
 
 BoarderDouglasSeenText:
@@ -340,7 +340,7 @@ MahoganyGymGuideText:
 	text "PRYCE is a veteran"
 	line "who has trained"
 
-	para "#MON for some"
+	para "#mon for some"
 	line "50 years."
 
 	para "He's said to be"

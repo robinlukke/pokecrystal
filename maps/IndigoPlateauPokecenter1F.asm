@@ -199,7 +199,7 @@ PlateauRivalLeavesMovement:
 	step_end
 
 IndigoPlateauPokecenter1FCooltrainerMText:
-	text "At the #MON"
+	text "At the #mon"
 	line "LEAGUE, you'll get"
 
 	para "tested by the"
@@ -216,7 +216,7 @@ PlateauRivalText1:
 	text "Hold it."
 
 	para "You're going to"
-	line "take the #MON"
+	line "take the #mon"
 
 	para "LEAGUE challenge"
 	line "now?"
@@ -225,7 +225,7 @@ PlateauRivalText1:
 	line "to happen."
 
 	para "My super-well-"
-	line "trained #MON"
+	line "trained #mon"
 
 	para "are going to pound"
 	line "you."
@@ -246,7 +246,7 @@ PlateauRivalText2:
 
 	para "I… I have to think"
 	line "more about my"
-	cont "#MON…"
+	cont "#mon…"
 
 	para "Humph! Try not to"
 	line "lose!"

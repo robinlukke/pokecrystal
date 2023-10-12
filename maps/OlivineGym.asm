@@ -184,7 +184,7 @@ OlivineGymGuidePreText:
 	cont "LIGHTHOUSE."
 
 	para "She's been tending"
-	line "to a sick #MON."
+	line "to a sick #mon."
 
 	para "A strong trainer"
 	line "has to be compas-"

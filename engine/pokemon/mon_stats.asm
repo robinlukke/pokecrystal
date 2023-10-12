@@ -114,11 +114,11 @@ PrintTempMonStats:
 	ret
 
 .StatNames:
-	db   "ATTACK"
-	next "DEFENSE"
-	next "SP.ATK"
-	next "SP.DEF"
-	next "SPEED"
+	db   "Attack"
+	next "Defense"
+	next "Sp.Atk"
+	next "Sp.Def"
+	next "Speed"
 	next "@"
 
 GetGender:

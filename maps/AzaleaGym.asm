@@ -148,17 +148,17 @@ AzaleaGymStatue:
 	jumpstd GymStatue2Script
 
 BugsyText_INeverLose:
-	text "I'm BUGSY!"
+	text "I'm Bugsy!"
 	line "I never lose when"
 
 	para "it comes to bug"
-	line "#MON."
+	line "#mon."
 
 	para "My research is"
 	line "going to make me"
 
 	para "the authority on"
-	line "bug #MON!"
+	line "bug #mon!"
 
 	para "Let me demonstrate"
 	line "what I've learned"
@@ -168,33 +168,33 @@ BugsyText_INeverLose:
 BugsyText_ResearchIncomplete:
 	text "Whoa, amazing!"
 	line "You're an expert"
-	cont "on #MON!"
+	cont "on #mon!"
 
 	para "My research isn't"
 	line "complete yet."
 
 	para "OK, you win. Take"
-	line "this BADGE."
+	line "this Badge."
 	done
 
 Text_ReceivedHiveBadge:
 	text "<PLAYER> received"
-	line "HIVEBADGE."
+	line "HiveBadge."
 	done
 
 BugsyText_HiveBadgeSpeech:
 	text "Do you know the"
-	line "benefits of HIVE-"
-	cont "BADGE?"
+	line "benefits of Hive-"
+	cont "Badge?"
 
 	para "If you have it,"
-	line "#MON up to L30"
+	line "#mon up to L30"
 
 	para "will obey you,"
 	line "even traded ones."
 
-	para "#MON that know"
-	line "CUT will be able"
+	para "#mon that know"
+	line "Cut will be able"
 
 	para "to use it outside"
 	line "of battle too."
@@ -205,7 +205,7 @@ BugsyText_HiveBadgeSpeech:
 
 BugsyText_FuryCutterSpeech:
 	text "TM49 contains"
-	line "FURY CUTTER."
+	line "Fury Cutter."
 
 	para "If you don't miss,"
 	line "it gets stronger"
@@ -220,7 +220,7 @@ BugsyText_FuryCutterSpeech:
 	done
 
 BugsyText_BugMonsAreDeep:
-	text "Bug #MON are"
+	text "Bug #mon are"
 	line "deep. There are"
 
 	para "many mysteries to"
@@ -231,7 +231,7 @@ BugsyText_BugMonsAreDeep:
 	done
 
 BugCatcherBennySeenText:
-	text "Bug #MON evolve"
+	text "Bug #mon evolve"
 	line "young. So they get"
 
 	para "stronger that much"
@@ -244,13 +244,13 @@ BugCatcherBennyBeatenText:
 	done
 
 BugCatcherBennyAfterBattleText:
-	text "#MON become"
+	text "#mon become"
 	line "stronger if they"
 	cont "evolve. Really!"
 	done
 
 BugCatcherAlSeenText:
-	text "Bug #MON are"
+	text "Bug #mon are"
 	line "cool and tough!"
 
 	para "I'll prove it to"
@@ -267,18 +267,18 @@ BugCatcherAlAfterBattleText:
 	line "but most girls"
 
 	para "don't like bug"
-	line "#MON."
+	line "#mon."
 
 	para "I don't know why…"
 	done
 
 BugCatcherJoshSeenText:
 	text "You saved all the"
-	line "SLOWPOKE? Whew,"
+	line "Slowpoke? Whew,"
 	cont "you're mighty!"
 
 	para "But my grown-up"
-	line "#MON are pretty"
+	line "#mon are pretty"
 	cont "tough too!"
 	done
 
@@ -293,45 +293,45 @@ BugCatcherJoshAfterBattleText:
 	done
 
 TwinsAmyandmay1SeenText:
-	text "AMY: Hi! Are you"
+	text "Amy: Hi! Are you"
 	line "challenging the"
-	cont "LEADER? No way!"
+	cont "Leader? No way!"
 	done
 
 TwinsAmyandmay1BeatenText:
-	text "AMY & MAY: Oh,"
+	text "Amy & May: Oh,"
 	line "double goodness!"
 	done
 
 TwinsAmyandmay1AfterBattleText:
-	text "AMY: You're"
+	text "Amy: You're"
 	line "really strong!"
 	done
 
 TwinsAmyandmay2SeenText:
-	text "MAY: You want to"
-	line "see the LEADER?"
+	text "May: You want to"
+	line "see the Leader?"
 	cont "We come first!"
 	done
 
 TwinsAmyandmay2BeatenText:
-	text "AMY & MAY: Oh,"
+	text "Amy & May: Oh,"
 	line "double goodness!"
 	done
 
 TwinsAmyandmay2AfterBattleText:
-	text "MAY: Our bug #-"
-	line "MON lost! Oh, what"
+	text "May: Our bug #-"
+	line "Mon lost! Oh, what"
 	cont "a shame."
 	done
 
 AzaleaGymGuideText:
 	text "Yo, challenger!"
 
-	para "BUGSY's young, but"
+	para "Bugsy's young, but"
 	line "his knowledge of"
 
-	para "bug #MON is for"
+	para "bug #mon is for"
 	line "real."
 
 	para "It's going to be"
@@ -339,7 +339,7 @@ AzaleaGymGuideText:
 	cont "advice."
 
 	para "Let's see… Bug"
-	line "#MON don't like"
+	line "#mon don't like"
 	cont "fire."
 
 	para "Flying-type moves"
@@ -356,7 +356,7 @@ AzaleaGymGuideWinText:
 
 	para "With people like"
 	line "you, the future of"
-	cont "#MON is bright!"
+	cont "#mon is bright!"
 	done
 
 AzaleaGym_MapEvents:

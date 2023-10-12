@@ -228,7 +228,7 @@ RadioTower1FLuckyNumberManAskToPlayText:
 
 	para "Want me to check"
 	line "the ID numbers of"
-	cont "your #MON?"
+	cont "your #mon?"
 
 	para "If you get lucky,"
 	line "you win a prize."
@@ -311,7 +311,7 @@ RadioTower1FRadioCardWomanOfferQuizText:
 	cont "win a RADIO CARD."
 
 	para "Slide it into your"
-	line "#GEAR to play"
+	line "#Gear to play"
 
 	para "the radio anytime,"
 	line "anywhere."
@@ -323,7 +323,7 @@ RadioTower1FRadioCardWomanOfferQuizText:
 RadioTower1FRadioCardWomanQuestion1Text:
 	text "Question 1:"
 
-	para "Is there a #MON"
+	para "Is there a #mon"
 	line "that appears only"
 	cont "in the morning?"
 	done
@@ -355,7 +355,7 @@ RadioTower1FRadioCardWomanQuestion4Text:
 	line "VIOLET GYM LEADER"
 
 	para "who uses bird"
-	line "#MON?"
+	line "#mon?"
 	done
 
 RadioTower1FRadioCardWomanQuestion5Text:
@@ -379,7 +379,7 @@ RadioTower1FRadioCardWomanYouWinText:
 	done
 
 RadioTower1FPokegearIsARadioText:
-	text "<PLAYER>'s #GEAR"
+	text "<PLAYER>'s #Gear"
 	line "can now double as"
 	cont "a radio!"
 	done
@@ -413,7 +413,7 @@ RadioTower1FLassText:
 
 RadioTower1FYoungsterText:
 	text "I love MARY, from"
-	line "#MON TALK."
+	line "#mon TALK."
 
 	para "I only know what"
 	line "she sounds like,"
@@ -455,17 +455,17 @@ RadioTower1FDirectoryText:
 	para "3F PERSONNEL"
 	line "4F PRODUCTION"
 
-	para "5F DIRECTOR'S"
+	para "5F DIRECTOR's"
 	line "   OFFICE"
 	done
 
 RadioTower1FLuckyChannelSignText:
 	text "LUCKY CHANNEL!"
 
-	para "Win with #MON"
+	para "Win with #mon"
 	line "ID numbers!"
 
-	para "Trade your #MON"
+	para "Trade your #mon"
 	line "to collect differ-"
 	cont "ent ID numbers!"
 	done

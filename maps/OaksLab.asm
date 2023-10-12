@@ -126,7 +126,7 @@ OakOpenMtSilverText:
 	line "mountain that is"
 
 	para "home to many wild"
-	line "#MON."
+	line "#mon."
 
 	para "It's too dangerous"
 	line "for your average"
@@ -183,7 +183,7 @@ OakYesKantoBadgesText:
 	done
 
 OaksAssistant1Text:
-	text "The PROF's #MON"
+	text "The PROF's #mon"
 	line "TALK radio program"
 
 	para "isn't aired here"
@@ -204,9 +204,9 @@ OaksAssistant2Text:
 
 OaksAssistant3Text:
 	text "Don't tell anyone,"
-	line "but PROF.OAK'S"
+	line "but PROF.OAK's"
 
-	para "#MON TALK isn't"
+	para "#mon TALK isn't"
 	line "a live broadcast."
 	done
 

@@ -43,7 +43,7 @@ PalletTownFisherText:
 	line "incredible!"
 
 	para "You can now trade"
-	line "#MON across"
+	line "#mon across"
 	cont "time like e-mail."
 	done
 
@@ -55,16 +55,16 @@ PalletTownSignText:
 	done
 
 RedsHouseSignText:
-	text "RED'S HOUSE"
+	text "RED's HOUSE"
 	done
 
 OaksLabSignText:
-	text "OAK #MON"
+	text "OAK #mon"
 	line "RESEARCH LAB"
 	done
 
 BluesHouseSignText:
-	text "BLUE'S HOUSE"
+	text "BLUE's HOUSE"
 	done
 
 PalletTown_MapEvents:

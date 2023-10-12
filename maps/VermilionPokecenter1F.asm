@@ -35,9 +35,9 @@ VermilionPokecenter1FBugCatcherScript:
 	jumptextfaceplayer VermilionPokecenter1FBugCatcherText
 
 VermilionPokecenter1FFishingGuruText:
-	text "A sleeping #MON"
+	text "A sleeping #mon"
 	line "is lying in front"
-	cont "of DIGLETT'S CAVE."
+	cont "of DIGLETT's CAVE."
 
 	para "It's a fantastic"
 	line "opportunity to get"
@@ -48,10 +48,10 @@ VermilionPokecenter1FFishingGuruText:
 
 VermilionPokecenter1FFishingGuruText_FoughtSnorlax:
 	text "There used to be a"
-	line "sleeping #MON"
+	line "sleeping #mon"
 
 	para "lying in front of"
-	line "DIGLETT'S CAVE."
+	line "DIGLETT's CAVE."
 
 	para "But it seems to"
 	line "have disappeared."

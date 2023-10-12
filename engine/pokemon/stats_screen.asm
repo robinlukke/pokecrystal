@@ -227,7 +227,7 @@ if DEF(_DEBUG)
 	jp StatsScreen_JoypadAction
 
 .HatchSoonString:
-	db "▶HATCH SOON!@"
+	db "▶Hatch Soon!@"
 endc
 
 StatsScreen_LoadPage:
@@ -436,9 +436,9 @@ StatsScreen_InitUpperHalf:
 	call PlaceString
 	hlcoord 18, 0
 	call .PlaceGenderChar
-	hlcoord 9, 4
-	ld a, "/"
-	ld [hli], a
+	hlcoord 8, 4
+	;ld a, "/"
+	;ld [hli], a
 	ld a, [wBaseDexNo]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
@@ -598,7 +598,7 @@ LoadPinkPage:
 	ld a, [wMonType]
 	cp BOXMON
 	jr z, .StatusOK
-	hlcoord 6, 13
+	hlcoord 1, 13
 	push hl
 	ld de, wTempMonStatus
 	predef PlaceStatusString
@@ -651,7 +651,7 @@ LoadPinkPage:
 	hlcoord 10, 12
 	call PlaceString
 	ld de, .ToStr
-	hlcoord 14, 14
+	hlcoord 10, 14
 	call PlaceString
 	hlcoord 11, 16
 	ld a, [wTempMonLevel]
@@ -714,23 +714,23 @@ LoadPinkPage:
 	ret
 
 .Status_Type:
-	db   "STATUS/"
-	next "TYPE/@"
+	db   "Status:"
+	next "Type:@"
 
 .OK_str:
 	db "OK @"
 
 .ExpPointStr:
-	db "EXP POINTS@"
+	db "Exp Points@"
 
 .LevelUpStr:
-	db "LEVEL UP@"
+	db "Level Up@"
 
 .ToStr:
-	db "TO@"
+	db "Next@"
 
 .PkrsStr:
-	db "#RUS@"
+	db "#rus@"
 
 LoadGreenPage:
 	ld de, .Item
@@ -769,13 +769,13 @@ LoadGreenPage:
 	ret
 
 .Item:
-	db "ITEM@"
+	db "Item:@"
 
 .ThreeDashes:
 	db "---@"
 
 .Move:
-	db "MOVE@"
+	db "Moves:@"
 
 LoadBluePage:
 	call .PlaceOTInfo
@@ -835,7 +835,7 @@ IDNoString:
 	db "<ID>№.@"
 
 OTString:
-	db "OT/@"
+	db "OT:@"
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs
@@ -1031,7 +1031,7 @@ if DEF(_DEBUG)
 	jr .placed_push_start
 
 .PushStartString:
-	db "▶PUSH START.@"
+	db "▶Push START.@"
 
 .placed_push_start
 endc
@@ -1066,7 +1066,7 @@ endc
 	ret
 
 EggString:
-	db "EGG@"
+	db "Egg@"
 
 FiveQMarkString:
 	db "?????@"

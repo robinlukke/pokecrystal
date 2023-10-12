@@ -89,8 +89,8 @@ _DebugRoom:
 ; entries correspond to DEBUGROOMMENUITEM_* constants
 	db "SP CLEAR@"
 	db "WIN WORK CLR@"
-	db "#MON GET!@"
-	db "#DEX COMP@"
+	db "#mon GET!@"
+	db "#dex COMP@"
 	db "TIMER RESET@"
 	db "DECORATE ALL@"
 	db "ITEM GET!@"
@@ -98,7 +98,7 @@ _DebugRoom:
 	db "NEXT@"
 	db "GB ID SET@"
 	db "BTL REC CLR@"
-	db "#DEX CLR@"
+	db "#dex CLR@"
 	db "HALT CHK CLR@"
 	db "BATTLE SKIP@"
 	db "HOF CLEAR@"
@@ -1320,12 +1320,12 @@ DebugRoomMenu_PokemonGet_Page4Values:
 	paged_value wDebugRoomMonBox,           1,   NUM_BOXES,   $0e,            DebugRoom_BoxStructStrings.SendBox,   NULL,                       FALSE
 
 DebugRoom_BoxStructStrings:
-.Pokemon:   db "#MON@"
-.Item:      db "ITEM@"
-.Move1:     db "MOVE 1@"
-.Move2:     db "MOVE 2@"
-.Move3:     db "MOVE 3@"
-.Move4:     db "MOVE 4@"
+.Pokemon:   db "#mon@"
+.Item:      db "Item@"
+.Move1:     db "Move 1@"
+.Move2:     db "Move 2@"
+.Move3:     db "Move 3@"
+.Move4:     db "Move 4@"
 .ID0:       db "ID[0]@"
 .ID1:       db "ID[1]@"
 .BaseExp0:  db "BASE EXP[0]@" ; unreferenced
@@ -1347,8 +1347,8 @@ DebugRoom_BoxStructStrings:
 .PP2:       db "PP 2@"
 .PP3:       db "PP 3@"
 .PP4:       db "PP 4@"
-.Friend:    db "FRIEND@"
-.Pokerus:   db "#RUS@"
+.Friend:    db "Friend@"
+.Pokerus:   db "#rus@"
 .NoUse0:    db "NO USE[0]@"
 .NoUse1:    db "NO USE[1]@"
 .Level:     db "LEVEL@"
@@ -1700,7 +1700,7 @@ DebugRoomMenu_BTBugPoke:
 	ret
 
 .NoBugMonText:
-	text "No bug #MON."
+	text "No bug #mon."
 	done
 
 .bug_mon:
@@ -1723,7 +1723,7 @@ DebugRoomMenu_BTBugPoke:
 	ret
 
 .ItsBugMonText:
-	text "It'", "s bug #MON!"
+	text "It'", "s bug #mon!"
 	next "No.    Clear flag?"
 	done
 

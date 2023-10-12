@@ -102,9 +102,9 @@ PrintPage2:
 
 GBPrinterStrings: ; used only for BANK(GBPrinterStrings)
 GBPrinterString_Null: db "@"
-GBPrinterString_CheckingLink: next " CHECKING LINK...@"
-GBPrinterString_Transmitting: next "  TRANSMITTING...@"
-GBPrinterString_Printing: next "    PRINTING...@"
+GBPrinterString_CheckingLink: next " Checking Link...@"
+GBPrinterString_Transmitting: next "  Transmitting...@"
+GBPrinterString_Printing: next "    Printing...@"
 GBPrinterString_PrinterError1:
 	db   " Printer Error 1"
 	next ""
@@ -175,11 +175,11 @@ PrintPartyMonPage1:
 	ld hl, wPartyMonNicknames
 	call GetCurPartyMonName
 	hlcoord 8, 4
-	call PlaceString
-	hlcoord 9, 6
-	ld [hl], "/"
+	; call PlaceString
+	; hlcoord 9, 6
+	; ld [hl], "/"
 	call GetPokemonName
-	hlcoord 10, 6
+	hlcoord 8, 6
 	call PlaceString
 	hlcoord 8, 0
 	ld [hl], "№"
@@ -326,20 +326,20 @@ PlaceGenderAndShininess:
 	ret
 
 PrintParty_OTString:
-	db "OT/@"
+	db "OT:@"
 
 PrintParty_MoveString:
-	db "MOVE@"
+	db "Move@"
 
 PrintParty_IDNoString:
 	db "<ID>№.@"
 
 PrintParty_StatsString:
-	db   "ATTACK"
-	next "DEFENSE"
-	next "SPCL.ATK"
-	next "SPCL.DEF"
-	next "SPEED"
+	db   "Attack"
+	next "Defense"
+	next "Sp.Atk"
+	next "Sp.Def"
+	next "Speed"
 	db   "@"
 
 PrintParty_NoMoveString:
